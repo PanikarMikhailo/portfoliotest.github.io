@@ -1,35 +1,32 @@
 .grid__container {
     display: grid;
-    grid-template-columns: 400px 572px;
-    grid-template-rows: 243px 357px;
-    gap: 20px 70px;
-    grid-template-areas: 
-    "img descr"
-    "img development";
-}
+    grid-template-columns: 400px 670px;
+    grid-template-rows: minmax(245px, auto) minmax(320px, auto);
+    gap: 40px 70px;
 
-#img {
-    grid-area: img;
-}
-#descr {
-    grid-area: descr;
-}
-#development {
-    grid-area: development;
 }
 .about-me {
-    padding: 120px 0;
+    padding-top: 120px;
+    height: 100vh;
     &__circle {
         z-index: 2;
-        padding-left: 10px;
+        padding-left: 12px;
         position: relative;
         @include before_circle;
     }
-    &__line {
-        width: 60px;
-        height: 3px;
-        background: $main-color;
+    &__img {
+        grid-row: 1/3;
+        img {
+            width: 100%;
+        }
     }
+    &__descr {
+        padding-top: 7px;
+        .line {
+            margin-top: 0;
+        }
+    }
+
     &__subtitle {
         margin-top: 20px;
         width: 570px;
@@ -43,7 +40,7 @@
     &__development {
         display: grid;
         grid-template-columns: repeat(2, 260px);
-        grid-template-rows: repeat(2, 116px);
+        grid-template-rows: repeat(2, minmax(115px, auto));
         gap: 20px 50px
     }
     &__items {
@@ -54,6 +51,7 @@
     &__mincircle {
         z-index: 2;
         position: relative;
+        padding-left: 15px;
         @include before_circle;
         img {
             margin: 15px 20px 0 0;
@@ -61,8 +59,8 @@
             height: 23.45px;
         }
         &:before {
-            top: 2%;
-            left: -33%;
+            top: -1%;
+            left: 0%;
         }
     }
     &__text {
