@@ -8,6 +8,16 @@
     justify-content: space-between;
     height: 340px;
     z-index: 3;
+    &__link {
+        &:hover {
+            svg {
+                path {
+                    transition: all .3s;
+                    fill: $main-color;
+                }
+            }
+        }
+    }
     &__divinder{
         width: 2px;
         height: 70px;
