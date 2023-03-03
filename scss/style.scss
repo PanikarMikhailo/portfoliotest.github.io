@@ -1,3 +1,8 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
 /* libs */
 @import 'libs/bootstrap-reboot.min';
 /* base */
@@ -17,18 +22,20 @@
 @import 'block/price';
 @import 'block/contacts';
 @import 'block/policy';
+
+
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
 
-* {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+
 .container {
     width: 1140px;
     margin: 0 auto;
 }
+/* media blocks start*/
+@import 'block/media';
+/* media blocks end */
+
 aside {
     position: relative;
 }
